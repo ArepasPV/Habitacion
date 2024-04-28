@@ -14,10 +14,12 @@ public class HabitacionController {
     @Autowired
     private HabitacionService service;
 
+    @GetMapping("list")
     public List<Habitacion> getHabitaciones() {
         return service.getHabitaciones();
     }
 
+    @GetMapping("get")
     public Habitacion getHabitacionById(@RequestParam("id") int id) {
         return service.getHabitacion(id);
     }

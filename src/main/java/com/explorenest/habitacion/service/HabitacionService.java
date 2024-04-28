@@ -12,11 +12,11 @@ import java.util.List;
 public class HabitacionService {
     @Autowired
     private HabitacionRepository repository;
-    @GetMapping("list")
+
     public List<Habitacion> getHabitaciones(){
         return repository.findAll();
     }
-    @GetMapping("get")
+
     public Habitacion getHabitacion(int id){
         return repository.findOneById(id);
     }
